@@ -1,0 +1,106 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+}
+
+#notesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 100px;
+}
+
+.note-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.note {
+    width: 250px;
+    background-color: #ffffff;
+    margin-bottom: 10px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.note-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.note-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.note-reminder {
+    font-size: 16px;
+    color: #635c5c;
+}
+
+.from-reminder {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.note-iconsBox {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.note-iconsBox-icon {
+    display: inline-block;
+    border: none;
+    border-radius: 7px;
+    background: whitesmoke;
+}
+
+#edit {
+    border-radius: 7px;
+    border:none;
+    background-color: none;
+}
+/* 
+.note-checkboxes input {
+    margin-right: 5px;
+} */
+
+.archive-note{
+    width: 270px;
+    background-color: #ffffff;
+    margin-bottom: 10px; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.trash-note {
+    width: 270px;
+    background-color: #ffffff;
+    margin-bottom: 10px; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#search {
+    border-radius: 7px;
+    padding: 10px 25px;
+    width: 70%;
+    margin: auto;
+    outline: none;
+    border: 1px solid black
+}

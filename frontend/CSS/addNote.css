@@ -1,0 +1,69 @@
+.note-container {
+    background-color: #f8f8f8;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 400px;
+    margin: auto;
+    margin-top: 15px;
+}
+.note-container h4 {
+    margin-top: 0;
+}
+.note-container form {
+    display: flex;
+    flex-direction: column;
+}
+.note-container label {
+    margin-top: 8px;
+}
+.note-container input,
+.note-container textarea,
+.note-container select {
+    padding: 7px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.note-container button {
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.note-container button:hover {
+    background-color: #0056b3;
+}
+.tags-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags-input .tag {
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 2px;
+    display: inline-flex;
+    align-items: center;
+}
+.tags-input .tag .remove-tag {
+    margin-left: 5px;
+    cursor: pointer;
+}
+.autocomplete-list {
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 100px;
+    overflow-y: auto;
+}
+.autocomplete-list div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+.autocomplete-list div:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash Notes</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/home.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/frontend/Html/home.html">Notes App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/frontend/Html/home.html">Notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/frontend/Html/addNote.html">Add Note</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/frontend/Html/archives.html">Archived Notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/frontend/Html/trash.html">Trash</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/frontend/Html/reminder.html">Reminders</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h4 style="margin-left: 7rem; margin-top: 2rem;" class="display-trash"></h4>
+
+    <div class="container">
+        <div id="notesGrid"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../Javascript/navbar.js"></script>
+    <script src="../Javascript/trash.js"></script>
+</body>
+</html>
