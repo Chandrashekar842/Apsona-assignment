@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch("https://notes-application-l14a.onrender.com/.netlify/functions/note/get-notes", {
+    const response = await fetch("https://notes-application-l14a.onrender.com/note/get-notes", {
         method: "GET",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("noteAuthToken"),
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const noteId = note._id;
             try {
               const response = await fetch(
-                `https://notes-application-l14a.onrender.com/.netlify/functions/note/archive/${noteId}`,
+                `https://notes-application-l14a.onrender.com/note/archive/${noteId}`,
                 {
                   method: "PUT",
                   headers: {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           trashButton?.addEventListener("click", async () => {
             try {
               const response = await fetch(
-                `https://notes-application-l14a.onrender.com/.netlify/functions/note/trash/${note._id}`,
+                `https://notes-application-l14a.onrender.com/note/trash/${note._id}`,
                 {
                   method: "PUT",
                   headers: {

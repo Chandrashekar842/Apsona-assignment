@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/auth/register', {
+            const response = await fetch('https://notes-application-l14a.onrender.com/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

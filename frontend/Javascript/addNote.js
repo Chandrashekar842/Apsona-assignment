@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         let response 
 
         if(editNote) {
-            response = await fetch(`https://notes-application-l14a.onrender.com/.netlify/functions/note/edit-note/${editNote._id}`, {
+            response = await fetch(`https://notes-application-l14a.onrender.com/note/edit-note/${editNote._id}`, {
                 method: 'PUT',
                 headers: {
                     "Content-Type": "application/json",
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async (e) => {
                 body: JSON.stringify(noteData)
             })
         } else {
-            response = await fetch("https://notes-application-l14a.onrender.com/.netlify/functions/note/add-note", {
+            response = await fetch("https://notes-application-l14a.onrender.com/note/add-note", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

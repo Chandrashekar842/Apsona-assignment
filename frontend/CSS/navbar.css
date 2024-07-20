@@ -24,3 +24,9 @@
     color: #000000;
     border-bottom: 1px solid black;
 }
+
+.name {
+    margin: auto;
+    font-size: 1.25rem;
+    padding-right: 1rem;
+}

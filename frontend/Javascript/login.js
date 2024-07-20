@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/auth/login', {
+            const response = await fetch('https://notes-application-l14a.onrender.com/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

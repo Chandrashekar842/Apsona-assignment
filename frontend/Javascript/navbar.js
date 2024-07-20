@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
+const displayBox = document.querySelector('.name')
+const user_name = JSON.parse(localStorage.getItem('loggedInUser'))
+
+displayBox.textContent = `Hello, ${user_name.name}`
+
+
 const currentPage = window.location.href
 
 const links = document.querySelectorAll('.nav-link')

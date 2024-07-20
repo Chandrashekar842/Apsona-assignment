@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     try {
-        const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/note/reminder', {
+        const response = await fetch('https://notes-application-l14a.onrender.com/note/reminder', {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('noteAuthToken')
