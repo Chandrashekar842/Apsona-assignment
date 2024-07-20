@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     try {
-        const response = await fetch('http://localhost:4000/note/reminder', {
+        const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/note/reminder', {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('noteAuthToken')
             }
         });
         const result = await response.json();
-        console.log(result)
         const notes = result.notes
         const notesGrid = document.getElementById('notesGrid');
         const display = document.querySelector('.display')
@@ -35,8 +34,6 @@ document.addEventListener('DOMContentLoaded', async function() {
             } else {
                 noteBox.style.backgroundColor = note.backgroundColor;
             }
-
-            console.log(note.reminder.split('T')[0])
 
             const titleElement = document.createElement('div');
             titleElement.classList.add('note-title');

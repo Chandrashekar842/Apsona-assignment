@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     try {
-        const response = await fetch('http://localhost:4000/note/archives', {
+        const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/note/archives', {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('noteAuthToken')
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             archiveButton?.addEventListener('click', async () => {
                 const noteId = note._id
                 try {
-                    const response = await fetch(`http://localhost:4000/note/remove-from-archive/${noteId}`, {
+                    const response = await fetch(`https://notes-application-l14a.onrender.com/.netlify/functions/note/remove-from-archive/${noteId}`, {
                         method: 'PUT',
                         headers: {
                             'Authorization': 'Bearer ' + localStorage.getItem('noteAuthToken')
@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', async function() {
                     })
                     const result = await response.json()
                     window.location.href = 'archives.html'
-                    console.log(result)
                 } catch(err) {
                     console.log(err)
                 }

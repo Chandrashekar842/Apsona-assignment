@@ -20,9 +20,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use("/.netlify/functions/auth", authRouter);
+app.use("/auth", authRouter);
 
-app.use("/.netlify/functions/note", noteRouter);
+app.use("/note", noteRouter);
 
 app.use(notFound);
 

@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     try {
-        const response = await fetch('http://localhost:4000/note/trash', {
+        const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/note/trash', {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('noteAuthToken')
             }
         });
         const result = await response.json();
-        console.log(result)
         const notes = result.notes
         const notesGrid = document.getElementById('notesGrid');
         const displayTrash = document.querySelector('.display-trash')
@@ -69,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             trashButton?.addEventListener('click', async () => {
                 const noteId = note._id
                 try {
-                    const response = await fetch(`http://localhost:4000/note/remove-from-trash/${noteId}`, {
+                    const response = await fetch(`https://notes-application-l14a.onrender.com/.netlify/functions/note/remove-from-trash/${noteId}`, {
                         method: 'PUT',
                         headers: {
                             'Authorization': 'Bearer ' + localStorage.getItem('noteAuthToken')
@@ -77,7 +76,6 @@ document.addEventListener('DOMContentLoaded', async function() {
                     })
                     const result = await response.json()
                     window.location.href = 'trash.html'
-                    console.log(result)
                 } catch(err) {
                     console.log(err)
                 }

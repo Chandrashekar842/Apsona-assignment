@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('http://localhost:4000/auth/register', {
+            const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Display errors
                 result.err.forEach(error => showError(error));
             } else {
-                console.log(result);
                 alert('Registration successful!');
                 window.location.href = 'login.html';
             }

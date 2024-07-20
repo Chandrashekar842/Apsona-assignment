@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('http://localhost:4000/auth/login', {
+            const response = await fetch('https://notes-application-l14a.onrender.com/.netlify/functions/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     name: result.user.name,
                 }
                 const saveUser = JSON.stringify(user)
-                console.log(saveUser)
                 localStorage.setItem('noteAuthToken', result.token)
                 localStorage.setItem('loggedInUser', saveUser)
                 alert("Login successful")

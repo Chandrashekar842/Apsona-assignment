@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         let response 
 
         if(editNote) {
-            response = await fetch(`http://localhost:4000/note/edit-note/${editNote._id}`, {
+            response = await fetch(`https://notes-application-l14a.onrender.com/.netlify/functions/note/edit-note/${editNote._id}`, {
                 method: 'PUT',
                 headers: {
                     "Content-Type": "application/json",
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async (e) => {
                 body: JSON.stringify(noteData)
             })
         } else {
-            response = await fetch("http://localhost:4000/note/add-note", {
+            response = await fetch("https://notes-application-l14a.onrender.com/.netlify/functions/note/add-note", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         const result = await response.json();
 
         if (response.ok) {
-          console.log(result);
           localStorage.removeItem('editNote')
           alert("note created successfully");
           window.location.href = "home.html";
