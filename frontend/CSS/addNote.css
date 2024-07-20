@@ -67,3 +67,7 @@
 .autocomplete-list div:hover {
     background-color: #e0e0e0;
 }
+
+#backgroundColor {
+    height: 2rem;
+}
