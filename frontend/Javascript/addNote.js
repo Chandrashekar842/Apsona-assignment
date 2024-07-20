@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async (e) => {
         if (response.ok) {
           localStorage.removeItem('editNote')
           alert("note created successfully");
-          window.location.href = "home.html";
+          window.location.href = "index.html";
         } else {    
           console.log(result);
           alert("note not created");

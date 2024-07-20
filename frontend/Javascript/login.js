@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('noteAuthToken', result.token)
                 localStorage.setItem('loggedInUser', saveUser)
                 alert("Login successful")
-                window.location.href = 'home.html'
+                window.location.href = 'index.html'
             }
         } catch (error) {
             console.error('Error:', error);

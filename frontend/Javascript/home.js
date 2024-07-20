@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
               );
               const result = await response.json();
-              window.location.href = "home.html";
+              window.location.href = "index.html";
             } catch (err) {
               console.log(err);
             }
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               );
     
               if (response.ok) {
-                window.location.href = "home.html";
+                window.location.href = "index.html";
                 noteBox.remove();
               } else {
                 const error = await response.json();
