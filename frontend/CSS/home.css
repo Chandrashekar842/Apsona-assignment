@@ -2,12 +2,14 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column; 
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 #notesGrid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     min-height: 100px;
 }
